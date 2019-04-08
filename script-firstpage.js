@@ -1,26 +1,19 @@
 $(document).ready(function(){
     console.log("test");
     
-    
-    
     let xhr = new XMLHttpRequest();
     
     xhr.onload = function() {
        if(xhr.status === 200){
            responseObject = JSON.parse(xhr.responseText);
     
-           let test = responseObject.items;
-           console.log(test);
-    
-           let newContent = ''; // Tom sträng som fylls på med nu HTML
+           let newContent = ""; // Tom sträng som fylls på med nu HTML
     
            for (let i = 0; i < responseObject.items.length; i++) {
                newContent += '<div class="items">';
-               newContent += '<img class="list-img" src="'+ responseObject.items[i].img + '" ';
-               newContent += 'alt="' + responseObject.items[i].title + '" />';
                newContent +='<p><b>' + responseObject.items[i].title + '</b><br>';
-               newContent += '$'+ responseObject.items[i].price + '</p>';
-               newContent += '<button id="' + responseObject.items[i].id + '" class="add">köp</button>';
+               newContent += '<img class=" img-thumbnail" src="'+ responseObject.items[i].img + '" ';
+               newContent += 'alt="' + responseObject.items[i].title + '" /> <br>$'+ responseObject.items[i].price + '</p> <button id="' + responseObject.items[i].id + '" class="add btn btn-outline-warning btn-lg">köp <i class= "fas fa-cart-arrow-down"></i></button>';
                newContent += '<div>';
            }
     
@@ -33,8 +26,31 @@ $(document).ready(function(){
        let itemsAdded = [];
        let qty = 0;
     
-    
+
      $(".add").click(function(){
+
+
+         /*
+        let id = this.id;
+        itemsAdded.push(responseObject.items[id])
+        let myJson = JSON.stringify(itemsAdded)
+        localStorage.setItem('itemsAdded', myJson)
+
+        let storedValue = localStorage.getItem('itemsAdded')
+
+        storedValue = JSON.parse(storedValue);
+
+        if(qty === 0){
+            for (let i = 0; i < storedValue.length; i++) {
+                qty++
+                $("#cart-update").after('<tr><td><img class="table-img" src="'+ storedValue[i].img + '"></td><td>' + storedValue[i].title + '</td><td id="qty">' + qty + '</td><td>$' + storedValue[i].price +'</td><td><button id="clear-cart">Clear Cart</button></button></tr>');
+    
+         } }else{
+    
+            alert("OBS! You can only buy one product at a time")
+          }
+        
+*/
     
            let id = this.id;
     
@@ -48,7 +64,7 @@ $(document).ready(function(){
                }
            }
            else{
-               alert("OBS! din kundvagn är full")
+               alert("OBS! You can only buy one product at a time")
            }
     
            console.log(itemsAdded);
