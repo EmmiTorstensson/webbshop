@@ -1,3 +1,24 @@
+h1{
+    text-align: center;
+    color: lightseagreen;
+    font-family: 'Amatic SC', cursive;
+    font-size: 90px;
+}
+
+.items{
+
+   text-align: center;
+   margin: 40px;
+
+}
+
+.img-thumbnail{
+    max-width: 700px;
+}
+
+.center{
+    background-color: rgb(183, 226, 183)
+}
 
 
 .table-img{
