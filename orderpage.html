@@ -42,21 +42,32 @@
         </div>
 
 
-        <form action="#"> 
-          <div> 
-            <label for="user"><b>Username</b>
-            </label> <br> 
-            <input id="name" type="text" required> <br>
-             </div> 
-             
-             <div> 
-               <label for="pass"><b>Password </b></label> <br>
-               <input id="pass" type="password" required> <br> 
-              </div> 
-            <button id="btn-purchase">PURCHASE</button>  > 
-            </form> 
-  
-</div>
+        <button id="clear-cart">Clear Cart</button>
+        
+        <form name="myForm" onsubmit="return(validate())">
+            Full name: <br>
+            <input type="text" name="fullname">
+            <br>
+            email:<br>
+            <input type="email" name="Email">
+            <br>
+            Phone number:<br>
+            <input type="number" name="phone-nr">
+            <br>
+            Street:<br>
+            <input type="text" name="street">
+            <br>
+            Zip code:<br>
+            <input type="number" name="zip">
+            <br>
+            city:<br>
+            <input type="text" name="city">
+            <br><br>
+            <button id="btn-purchase">PURCHASE</button>
+        </form>
+        
+    </div>
+
 </div> <!-- CONTAINER -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
