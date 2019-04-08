@@ -8,7 +8,7 @@ $(document).ready(function(){
     console.log(typeof shoppingItem);
 
     for (let i = 0; i < shoppingItem.length; i++) {
-      $("#cart-update").after('<tr><td><img class="table-img" src="' + shoppingItem[i].img + '"></td><td>' + shoppingItem[i].title + '</td>'+ '<td id="qty">' + qty + '</td><td>$' + shoppingItem[i].price +'</td></tr>')
+      $("#cart-update").after('<tr><td><img class="table-img" src="' + shoppingItem[i].img + '"></td><td>' + shoppingItem[i].title + '</td><td id="qty">' + qty + '</td><td>$' + shoppingItem[i].price +'</td></tr>')
 
           ;
 
@@ -17,10 +17,9 @@ $(document).ready(function(){
 
 //Funkar ej
 
-$("#ta-bort").click(function() {
-    $("#cart-update").remove();
-    localStorage.clear('shoppingItem');
-
+$("#clear-cart").click(function() {
+    $("td").remove();
+    localStorage.removeItem("itemsAdded")
   });
 
 
