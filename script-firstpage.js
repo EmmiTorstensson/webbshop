@@ -57,6 +57,7 @@ $(document).ready(function(){
                $(this).parent().parent().remove()
                    itemsAdded.length = 0;
                    qty = 0;
+                   localStorage.removeItem("itemsAdded")
            })
     
            let myJson = JSON.stringify(itemsAdded)
