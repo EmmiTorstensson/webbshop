@@ -12,52 +12,51 @@
 </head>
 
 <body>
+
    <div class="container">
+
        <div class="jumbotron center">
            <h1>Bizarre Products Shop</h1>
        </div>
-<nav>
-
-       <ul class="nav justify-content-end">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Shop</a>
-            </li>
+  
+       <nav>
+          <ul class="nav justify-content-end">
             <li class="nav-item">
               <a class="nav-link" href="orderpage.html">Cart <i class='fas fa-cart-arrow-down'></i></a>
             </li>
           </ul>
-</nav>
+        </nav>
 
 
-   <div id="content" class="list-position">
+<div id="cart-container">
 
+        <h4>My Cart</h4>
+        <table id="myCart" class="table">
+            <tr>
+                <th></th>
+                <th>Item Name</th>
+                <th>Qty</th>
+                <th>Price</th>
+                <th>Remove item</th>
+            </tr>
+            <tr id="cart-update"></tr>
 
+        </table>
+</div>
 
-   </div>
+   <div id="content" class="list-position"></div>
 
-   <br><br>
+   
 
-   <div id="cart-container">
+   <footer class="page-footer">
+      <p>Page By Emmi & Emma</p>
+      </footer>
 
-           <h4>My Cart</h4>
-           <table id="myCart" class="table">
-               <tr>
-                   <th></th>
-                   <th>Item Name</th>
-                   <th>Qty</th>
-                   <th>Price</th>
-                   <th>Remove item</th>
-               </tr>
-               <tr id="cart-update"></tr>
-
-           </table>
-   </div>
-
-
-   <br><br><br>
    </div> <!-- container-->
+
+
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-   <script src="script-firstpage.js"></script>
+   <script src="script-index.js"></script>
 </body>
 </html>
 
