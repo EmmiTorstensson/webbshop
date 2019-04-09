@@ -1,10 +1,10 @@
 $(document).ready(function(){
-    console.log("test");
     
     let xhr = new XMLHttpRequest();
     
     xhr.onload = function() {
        if(xhr.status === 200){
+
            responseObject = JSON.parse(xhr.responseText);
     
            let newContent = ""; // Tom sträng som fylls på med nu HTML
