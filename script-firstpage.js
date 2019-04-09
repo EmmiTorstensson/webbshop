@@ -20,37 +20,14 @@ $(document).ready(function(){
            document.getElementById('content').innerHTML = newContent;
        }
     
-    
-    
+
+       if(localStorage == []){
+       
        // Pushar shopping till en array
        let itemsAdded = [];
        let qty = 0;
-    
 
      $(".add").click(function(){
-
-
-         /*
-        let id = this.id;
-        itemsAdded.push(responseObject.items[id])
-        let myJson = JSON.stringify(itemsAdded)
-        localStorage.setItem('itemsAdded', myJson)
-
-        let storedValue = localStorage.getItem('itemsAdded')
-
-        storedValue = JSON.parse(storedValue);
-
-        if(qty === 0){
-            for (let i = 0; i < storedValue.length; i++) {
-                qty++
-                $("#cart-update").after('<tr><td><img class="table-img" src="'+ storedValue[i].img + '"></td><td>' + storedValue[i].title + '</td><td id="qty">' + qty + '</td><td>$' + storedValue[i].price +'</td><td><button id="clear-cart">Clear Cart</button></button></tr>');
-    
-         } }else{
-    
-            alert("OBS! You can only buy one product at a time")
-          }
-        
-*/
     
            let id = this.id;
     
@@ -69,12 +46,7 @@ $(document).ready(function(){
     
            console.log(itemsAdded);
     
-           $('#ta-bort').click(function(){
-               $(this).parent().parent().remove()
-                   itemsAdded.length = 0;
-                   qty = 0;
-                   localStorage.removeItem("itemsAdded")
-           })
+       
     
            let myJson = JSON.stringify(itemsAdded)
            console.log(myJson);
@@ -85,7 +57,23 @@ $(document).ready(function(){
        let storedValue = localStorage.getItem('itemsAdded')
        console.log(storedValue);
     
-   
+    }
+    else{
+
+        let storedValue = localStorage.getItem('itemsAdded')
+        storedValue = JSON.parse(storedValue)
+        for (let i = 0; i < storedValue.length; i++) {
+            $("#cart-update").after('<tr><td><img class="table-img" src="' + storedValue[i].img + '"></td><td>' + storedValue[i].title + '</td>'+ '<td id="qty">    </td>' + '<td>$' + storedValue[i].price +'</td><td><button class="btn-danger" id="ta-bort">Ta bort</button></td></tr>')
+            }
+    }
+
+    function removeItem(){
+    $('#ta-bort').click(function(){
+        $(this).parent().parent().remove()
+            itemsAdded.length = 0;
+            qty = 0;
+            localStorage.removeItem("itemsAdded")
+    })}
     
     }; // onload
     

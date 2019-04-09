@@ -42,24 +42,37 @@
         </div>
 
 
-        <form action="#"> 
-          <div> 
-            <label for="user"><b>Username</b>
-            </label> <br> 
-            <input id="name" type="text" required> <br>
-             </div> 
-             
-             <div> 
-               <label for="pass"><b>Password </b></label> <br>
-               <input id="pass" type="password" required> <br> 
-              </div> 
-            <button id="btn-purchase">PURCHASE</button>  > 
-            </form> 
-  
-</div>
+    <h2>Registration</h2>
+    <form action="https://formspree.io/emmitors@gmail.com" method="POST">
+
+    <label for="firstname">Full Name</label>
+    <input id="name" type="text" placeholder="Full name"/>
+        <br>
+    <label for="email">Email</label>
+    <input id="email" type="email" placeholder="you@exampel.com"/>
+        <br>
+
+    <label for="phone">Phonenumber</label>    
+    <input id="phone" type="number" placeholder="Enter 10-digits"> 
+    <br> 
+    <label for="streetname">Streetname</label>
+    <input type="text" id="streetname" placeholder="Streetname">
+    <br>
+    <label for="zip">Zip</label>
+    <input id="zip" type="number" placeholder="XXXXX">
+        <br>
+    <label for="city">City</label>
+    <input type="text" id="city" placeholder="City">
+        <br>
+    
+    <button id="submit" type="submit" name="submit">Submit</button>
+    <div class="status"></div>
+
+  </form>
+
 </div> <!-- CONTAINER -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 <script src="script-orderpage.js"></script>
 </body>
-</html>
+</html> 
