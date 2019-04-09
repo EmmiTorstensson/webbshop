@@ -13,15 +13,14 @@ $(document).ready(function(){
                newContent += '<div class="items">';
                newContent +='<p><b>' + responseObject.items[i].title + '</b><br>';
                newContent += '<img class=" img-thumbnail" src="'+ responseObject.items[i].img + '" ';
-               newContent += 'alt="' + responseObject.items[i].title + '" /> <br>$'+ responseObject.items[i].price + '</p> <button id="' + responseObject.items[i].id + '" class="add btn btn-outline-warning btn-lg">köp <i class="fas fa-cart-arrow-down"></i></button>';
+               newContent += 'alt="' + responseObject.items[i].title + '" /> <br>$'+ responseObject.items[i].price + '</p> <button id="' + responseObject.items[i].id + '" class="add btn btn-outline-warning btn-lg">köp <i class= "fas fa-cart-arrow-down"></i></button>';
                newContent += '<div>';
            }
     
            document.getElementById('content').innerHTML = newContent;
        }
     
-
-       
+    
        
        // Pushar shopping till en array
        let itemsAdded = [];
@@ -35,7 +34,8 @@ $(document).ready(function(){
            if(qty === 0){
     
            itemsAdded.push(responseObject.items[id])
-    
+           localStorage.setItem('itemsAdded', myJson)
+            
            for (let i = 0; i < itemsAdded.length; i++) {
                qty++
                $("#cart-update").after('<tr><td><img class="table-img" src="' + itemsAdded[i].img + '"></td><td>' + itemsAdded[i].title + '</td>'+ '<td id="qty">' + qty + '</td>' + '<td>$' + itemsAdded[i].price +'</td><td><button class="btn-danger" id="ta-bort">Ta bort</button></td></tr>')
