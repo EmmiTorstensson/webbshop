@@ -2,9 +2,7 @@ $(document).ready(function(){
     
     // Skapar ett XMLHttpRequest-object
     let xhr = new XMLHttpRequest();
-    
-    // Uppdaterar en hemsida utan att behöva ladda om sidan
-    xhr.onload = function() {
+        xhr.onload = function() {
 
         // 200 betyder att allt fungerar som det ska
        if(xhr.status === 200){
@@ -31,7 +29,6 @@ $(document).ready(function(){
        let itemsAdded = [];
        let qty = 0;
     
-    
     // klickevent för de knappar som skriv ut i newContent
      $(".add").click(function(){
 
@@ -47,7 +44,12 @@ $(document).ready(function(){
            // Loop som skriver ut aktuelt objekt i div med id cart-update
            for (let i = 0; i < itemsAdded.length; i++) {
                qty++
-               $("#cart-update").after('<tr><td><img class="table-img" src="' + itemsAdded[i].img + '"></td><td>' + itemsAdded[i].title + '</td>'+ '<td id="qty">' + qty + '</td>' + '<td>$' + itemsAdded[i].price +'</td><td><button class="btn-danger" id="ta-bort">Ta bort</button></td></tr>')
+               $("#cart-update")
+               .after('<tr><td><img class="table-img" src="' + 
+               itemsAdded[i].img + '"></td><td>' + 
+               itemsAdded[i].title + '</td>'+ '<td id="qty">' + 
+               qty + '</td>' + '<td>$' + 
+               itemsAdded[i].price +'</td><td><button class="btn-danger" id="ta-bort">Ta bort</button></td></tr>')
                }
 
                // Omvandlar JS-objekt till sträng
