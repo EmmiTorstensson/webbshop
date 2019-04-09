@@ -88,3 +88,8 @@ label{
     width: 220px;
     margin-bottom: 50px;
 }
+
+.form-error{
+    color: red;
+    margin-top: 5px;
+}

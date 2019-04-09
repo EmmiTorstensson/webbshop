@@ -13,7 +13,11 @@ $(document).ready(function(){
     if(window.localStorage.length === 1){
     for (let i = 0; i < shoppingItem.length; i++) {
       $("#cart-update").after
-      ('<tr><td><img class="table-img" src="'+ shoppingItem[i].img + '"></td><td>' + shoppingItem[i].title + '</td><td id="qty">' + qty + '</td><td>$' + shoppingItem[i].price +'</td><td><button id="clear-cart">Clear Cart</button></button></tr>')}
+      ('<tr><td><img class="table-img" src="'
+      + shoppingItem[i].img + '"></td><td>' 
+      + shoppingItem[i].title + '</td><td id="qty">' 
+      + qty + '</td><td>$' 
+      + shoppingItem[i].price +'</td><td><button id="clear-cart">Clear Cart</button></button></tr>')}
     } 
     // Om LS är tomt skrivs meddelande ut
     // Formulär göms 
@@ -46,40 +50,41 @@ $('#submit').click(function(event){
     let city = $('#city').val()
     let statusElm = $('#status')
     statusElm.empty()
+    
+       
 
     // If sats kollar varje input
     if( name === ""){
-
         // Om namnfält lämnas tomt skrivs felmeddelande ut
-        statusElm.append("<div>Please enter name!</div>");
+        statusElm.append("<div class='form-error'>Name not valid!</div>");
         // Om namnfällt lämnas tomt hindras eventet som är att skicka formuläret att ske
         event.preventDefault()
     }
 
     if(!email.includes('@') || !email.includes('.')){
-        statusElm.append('<div>Email is  not valid</div>')
+        statusElm.append('<div class="form-error">Email not valid!</div>')
         event.preventDefault()
     } 
 
     if(phone.length != 10){
-        statusElm.append('<div>Enter valid phonenumber</div>')
+        statusElm.append('<div class="form-error">Enter valid phonenumber</div>')
         event.preventDefault()
     }
 
     if(streetname === ""){
-        statusElm.append('<div>Please enter streetname</div>')
+        statusElm.append('<div class="form-error">Please enter streetname</div>')
         event.preventDefault()
     }
 
     if(zip.length != 5){
-        statusElm.append('<div>Zip is not valid!</div>')
+        statusElm.append('<div class="form-error">Zip is not valid!</div>')
         event.preventDefault()
     }
     if(city === ""){
-        statusElm.append('<div>Enter city name!')
+        statusElm.append('<div class="form-error">Enter city name!<div>')
         event.preventDefault()
     }    
-    
+   
 })
  
 }); // READY

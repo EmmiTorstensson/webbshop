@@ -49,7 +49,7 @@ $(document).ready(function(){
                itemsAdded[i].img + '"></td><td>' + 
                itemsAdded[i].title + '</td>'+ '<td id="qty">' + 
                qty + '</td>' + '<td>$' + 
-               itemsAdded[i].price +'</td><td><button class="btn-danger" id="ta-bort">Ta bort</button></td></tr>')
+               itemsAdded[i].price +'</td><td><button class="btn-danger" id="ta-bort">Clear Cart</button></td></tr>')
                }
 
                // Omvandlar JS-objekt till sträng
@@ -61,18 +61,18 @@ $(document).ready(function(){
            else{
                alert("OBS! You can only buy one product at a time")
            }   
+           
+           // Klickevent som tömmer alla td i vår tabell
+           // tömmer även Local Storage
+           // Tömmer Array och sätter qty till 0
+           $('#ta-bort').click(function(){
+               $(this).parent().parent().remove()
+               itemsAdded.length = 0;
+               qty = 0;
+               localStorage.removeItem("itemsAdded")
+               console.log("knapp");
+            })
         })   
-        
-        // Klickevent som tömmer alla td i vår tabell
-        // tömmer även Local Storage
-        // Tömmer Array och sätter qty till 0
-        $('#ta-bort').click(function(){
-            $("this").parent().parent().remove()
-                itemsAdded.length = 0;
-                qty = 0;
-                localStorage.removeItem("itemsAdded")
-                console.log("knapp");
-        })
     }; // onload
     
     xhr.open('GET', 'items.json', true);
