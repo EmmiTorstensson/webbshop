@@ -20,7 +20,7 @@ $(document).ready(function() {
           qty +
           "</td><td>$" +
           shoppingItem[i].price +
-          '</td><td><button id="clear-cart">Clear Cart</button></button></tr>'
+          '</td><td><button class="btn-danger" id="clear-cart">Clear Cart</button></tr>'
       );
     }
   }

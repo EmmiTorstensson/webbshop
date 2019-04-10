@@ -29,7 +29,7 @@ $(document).ready(function() {
         newContent +=
           'alt="' +
           responseObject.items[i].title +
-          '" /> <br>$' +
+          '" /> <h5>' + responseObject.items[i].info + ' </h5><br><p>$' + 
           responseObject.items[i].price +
           '</p> <button id="' +
           responseObject.items[i].id +

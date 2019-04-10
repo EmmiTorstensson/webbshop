@@ -1,6 +1,6 @@
 h1 {
   text-align: center;
-  color: lightseagreen;
+  color: white;
   font-family: "Amatic SC", cursive;
   font-size: 90px;
 }
@@ -24,7 +24,7 @@ p {
 }
 
 .center {
-  background-color: rgb(183, 226, 183);
+  background-color: #202020
 }
 
 .table-img {
@@ -128,3 +128,8 @@ label {
   margin-top: 0;
   border-radius: 5px;
 }
+
+h5{
+    margin-top: 0px;
+}
+
