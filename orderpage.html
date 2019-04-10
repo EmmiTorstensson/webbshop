@@ -22,20 +22,25 @@
       rel="stylesheet"
     />
 
-    <title>Order Page</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="jumbotron center">
-        <h1>Bizarre Products Shop</h1>
-      </div>
 
-      <nav>
+   <title>Order Page</title>
+
+</head>
+<body>
+
+
+<div class="container">
+
+    <div class="jumbotron center">
+        <h1>Bizarre Product Shop</h1>
+    </div>
+            
+    <nav>
+
         <ul class="nav justify-content-end">
           <li class="nav-item">
             <a class="nav-link active" href="index.html"
-              ><i class="	fa fa-angle-double-left"></i> Back to shop</a
-            >
+              ><i class="fa fa-angle-double-left"></i> Back to shop</a>
           </li>
         </ul>
       </nav>
@@ -75,44 +80,49 @@
           <p class="email-hide">Email not valid!</p>
         </div>
 
-        <div class="form-class">
-          <label for="phone">Phonenumber</label>
-          <input
-            id="phone"
-            type="number"
-            placeholder="Enter 10-digits"
-            class="form-control"
-          />
-          <p class="phone-hide">Phonenumber not valid!</p>
-        </div>
+        <form action="https://formspree.io/emmitors@gmail.com" method="POST">
+            <h2>Registration</h2>
+    
+    <div class="form-class">    
+    <label for="firstname">Full Name</label>
+    <input id="name" type="text" class="form-control"/>
+    <div id="status-name"></div>
+    </div>  
+    
+    <div class="form-class">
+    <label for="email">Email</label>
+    <input id="email" type="email" class="form-control" />
+    <div id="status-email"></div>
+    </div>
+    
+    <div class="form-class">
+    <label for="phone">Phone number</label>    
+    <input id="phone" type="number" class="form-control"> 
+    <div id="status-phone"></div>
 
-        <div class="form-class">
-          <label for="streetname">Streetname</label>
-          <input type="text" id="streetname" class="form-control" />
-          <p class="street-hide">Streetname not valid!</p>
-        </div>
+    </div>
 
-        <div class="form-class">
-          <label for="zip">Zip</label>
-          <input
-            id="zip"
-            type="number"
-            placeholder="XXXXX"
-            class="form-control"
-          />
-          <p class="zip-hide">Zip code not valid!</p>
-        </div>
+    <div class="form-class">
+    <label for="streetname">Streetname</label>
+    <input type="text" id="streetname" class="form-control">
+    <div id="status-streetname"></div>
 
-        <div class="form-class">
-          <label for="city">City</label>
-          <input
-            type="text"
-            id="city"
-            placeholder="City"
-            class="form-control"
-          />
-          <p class="city-hide">City not valid!</p>
-        </div>
+    </div>
+    
+    <div class="form-class">
+    <label for="zip">Zip</label>
+    <input id="zip" type="number" class="form-control">
+    <div id="status-zip"></div>
+
+    </div>
+
+    <div class="form-class">
+    <label for="city">City</label>
+    <input type="text" id="city" class="form-control">
+    <div id="status-city"></div>
+
+    </div> 
+
 
         <button id="submit" name="submit">Submit</button>
       </form>

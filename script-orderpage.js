@@ -8,8 +8,8 @@ $(document).ready(function() {
   shoppingItem = JSON.parse(shoppingItem);
 
   // Kollar ifall det finns ett objekt i LS
-  // Skriver isf ute i div med id "cart-update"
-  if (window.localStorage.length === 1) {
+ // Skriver isf ute i div med id "cart-update"
+ if (window.localStorage.length === 1) {
     for (let i = 0; i < shoppingItem.length; i++) {
       $("#cart-update").after(
         '<tr><td><img class="table-img" src="' +
@@ -31,7 +31,7 @@ $(document).ready(function() {
     $(".empty-msg").show();
     $("form").hide(500);
   }
-
+  
   // Tömmer kundvagn, LS vi klick
   // Visar meddelande och döljer formulär
   $("#clear-cart").click(function() {
@@ -48,71 +48,68 @@ $(document).ready(function() {
     localStorage.removeItem("itemsAdded");
 
     // Sparar ner värderna från input i variabler
-    let name = $("#name").val();
-    let email = $("#email").val();
-    let phone = $("#phone").val();
-    let streetname = $("#streetname").val();
-    let zip = $("#zip").val();
-    let city = $("#city").val();
-    let statusElm = $("#status");
-    statusElm.empty();
+    let name = $('#name').val()
+    let email = $('#email').val()
+    let phone = $('#phone').val()
+    let streetname = $('#streetname').val()
+    let zip = $('#zip').val()
+    let city = $('#city').val()
+   
+    let statusElmName = $('#status-name')
+    let statusElmEmail = $('#status-email')
+    let statusElmPhone = $('#status-phone')
+    let statusElmStreetname = $('#status-streetname')
+    let statusElmZip = $('#status-zip')
+    let statusElmCity = $('#status-city')
+    
+    statusElmName.empty()
+    statusElmEmail.empty()
+    statusElmPhone.empty()
+    statusElmStreetname.empty()
+    statusElmZip.empty()
+    statusElmCity.empty()
 
-    //Lägger till information från formulär till LS
+      //Lägger till information från formulär till LS
     localStorage.setItem("name", name);
     localStorage.setItem("email", email);
     localStorage.setItem("phone", phone);
     localStorage.setItem("streetname", streetname);
     localStorage.setItem("zip", zip);
     localStorage.setItem("city", city);
+       
 
     // If sats kollar varje input
-    if (name === "") {
-      // Om namnfält lämnas tomt skrivs felmeddelande ut
-      $(".name-hide")
-        .show()
-        .hide(7000);
-      //   statusElm.append("<div class='form-error'>Name not valid!</div>");
-      // Om namnfällt lämnas tomt hindras eventet som är att skicka formuläret att ske
-      event.preventDefault();
+    if( name === ""){
+        // Om namnfält lämnas tomt skrivs felmeddelande ut
+        statusElmName.append("<div class='form-error'>Please enter name!</div>");
+        // Om namnfällt lämnas tomt hindras eventet som är att skicka formuläret att ske
+        event.preventDefault()
     }
 
-    if (!email.includes("@") || !email.includes(".")) {
-      $(".email-hide")
-        .show()
-        .hide(7000);
-      //   statusElm.append('<div class="form-error">Email not valid!</div>')
-      event.preventDefault();
+    if(!email.includes('@') || !email.includes('.')){
+        statusElmEmail.append('<div class="form-error">Email is not valid!</div>')
+        event.preventDefault()
+    } 
+
+    if(phone.length != 10){
+        statusElmPhone.append('<div class="form-error">Please enter ten digit phone number!</div>')
+        event.preventDefault()
     }
 
-    if (phone.length != 10) {
-      $(".phone-hide")
-        .show()
-        .hide(7000);
-      //   statusElm.append('<div class="form-error">Enter valid phonenumber</div>')
-      event.preventDefault();
+    if(streetname === ""){
+        statusElmStreetname.append('<div class="form-error">Please enter streetname!</div>')
+        event.preventDefault()
     }
 
-    if (streetname === "") {
-      $(".street-hide")
-        .show()
-        .hide(7000);
-      //    statusElm.append('<div class="form-error">Please enter streetname</div>')
-      event.preventDefault();
+    if(zip.length != 5){
+        statusElmZip.append('<div class="form-error">Please enter five digit zip!</div>')
+        event.preventDefault()
     }
-
-    if (zip.length != 5) {
-      $(".zip-hide")
-        .show()
-        .hide(7000);
-      //   statusElm.append('<div class="form-error">Zip is not valid!</div>')
-      event.preventDefault();
-    }
-    if (city === "") {
-      $(".city-hide")
-        .show()
-        .hide(7000);
-      //   statusElm.append('<div class="form-error">Enter city name!<div>')
-      event.preventDefault();
-    }
-  });
+    if(city === ""){
+        statusElmCity.append('<div class="form-error">Please enter city name!<div>')
+        event.preventDefault()
+    }    
+   
+  })
+ 
 }); // READY
