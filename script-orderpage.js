@@ -1,16 +1,15 @@
-$(document).ready(function(){
+$(document).ready(function() {
+  // hämtar sträng från LS
+  let shoppingItem = localStorage.getItem("itemsAdded");
 
-    // hämtar sträng från LS
-    let shoppingItem = localStorage.getItem('itemsAdded');
+  let qty = 1;
 
-    let qty= 1;
+  // Omvandlar sträng till JS-objekt
+  shoppingItem = JSON.parse(shoppingItem);
 
-    // Omvandlar sträng till JS-objekt
-    shoppingItem = JSON.parse(shoppingItem);
-
-    // Kollar ifall det finns ett objekt i LS
-    // Skriver isf ute i div med id "cart-update"
-    if(window.localStorage.length === 1){
+  // Kollar ifall det finns ett objekt i LS
+  // Skriver isf ute i div med id "cart-update"
+  if (window.localStorage.length === 1) {
     for (let i = 0; i < shoppingItem.length; i++) {
       $("#cart-update").after
       ('<tr><td><img class="table-img" src="'
@@ -25,21 +24,31 @@ $(document).ready(function(){
         $('#cart-container').hide()
         $('.empty-msg').show()
         $('form').hide(500)
+
     }
+  }
+  // Om LS är tomt skrivs meddelande ut
+  // Formulär göms
+  else {
+    $("#cart-container").hide();
+    $(".empty-msg").show();
+    $("form").hide(500);
+  }
 
-    // Tömmer kundvagn, LS vi klick
-    // Visar meddelande och döljer formulär
-$("#clear-cart").click(function() {
+  // Tömmer kundvagn, LS vi klick
+  // Visar meddelande och döljer formulär
+  $("#clear-cart").click(function() {
     $("td").remove();
-    localStorage.removeItem("itemsAdded")
-        $('#cart-container').hide()
-        $('.empty-msg').show()
-        $('form').hide()
-  });   
+    localStorage.removeItem("itemsAdded");
+    $("#cart-container").hide();
+    $(".empty-msg").show();
+    $("form").hide();
+  });
 
-
-// Validering av formulär vid klick
-$('#submit').click(function(event){
+  // Validering av formulär vid klick
+  $("#submit").click(function(event) {
+    //Tömmer LS
+    localStorage.removeItem("itemsAdded");
 
     // Sparar ner värderna från input i variabler
     let name = $('#name').val()
@@ -63,7 +72,13 @@ $('#submit').click(function(event){
     statusElmZip.empty()
     statusElmCity.empty()
 
-    
+      //Lägger till information från formulär till LS
+    localStorage.setItem("name", name);
+    localStorage.setItem("email", email);
+    localStorage.setItem("phone", phone);
+    localStorage.setItem("streetname", streetname);
+    localStorage.setItem("zip", zip);
+    localStorage.setItem("city", city);
        
 
     // If sats kollar varje input
@@ -101,3 +116,7 @@ $('#submit').click(function(event){
 })
  
 }); // READY
+=======
+   
+
+ 
