@@ -93,20 +93,20 @@ label {
     color: red;
     margin-top: 5px;
 }
-*/
 
-.name-hide,
-.email-hide,
-.phone-hide,
-.zip-hide,
-.street-hide,
-.city-hide {
-  display: none;
-  color: red;
-  font-size: 13px;
-  margin-top: 8px;
-  margin-bottom: 0;
+#submit{
+    padding: 7px;
+    width: 100px;
+    border-radius: 4px;
+    border: 1px solid rgb(143, 170, 94);
+    color:rgb(143, 170, 94);
 }
+
+#submit:hover{
+    background-color: rgb(143, 170, 94);
+    color: #ffffff
+}
+
 
 /* orderbekräftelse (page = succeed)*/
 
