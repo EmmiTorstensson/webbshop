@@ -17,7 +17,7 @@ $(document).ready(function(){
       + shoppingItem[i].img + '"></td><td>' 
       + shoppingItem[i].title + '</td><td id="qty">' 
       + qty + '</td><td>$' 
-      + shoppingItem[i].price +'</td><td><button id="clear-cart">Clear Cart</button></button></tr>')}
+      + shoppingItem[i].price +'</td><td><button class="btn-danger" id="clear-cart">Clear Cart</button></button></tr>')}
     } 
     // Om LS är tomt skrivs meddelande ut
     // Formulär göms 
@@ -48,40 +48,53 @@ $('#submit').click(function(event){
     let streetname = $('#streetname').val()
     let zip = $('#zip').val()
     let city = $('#city').val()
-    let statusElm = $('#status')
-    statusElm.empty()
+   
+    let statusElmName = $('#status-name')
+    let statusElmEmail = $('#status-email')
+    let statusElmPhone = $('#status-phone')
+    let statusElmStreetname = $('#status-streetname')
+    let statusElmZip = $('#status-zip')
+    let statusElmCity = $('#status-city')
+    
+    statusElmName.empty()
+    statusElmEmail.empty()
+    statusElmPhone.empty()
+    statusElmStreetname.empty()
+    statusElmZip.empty()
+    statusElmCity.empty()
+
     
        
 
     // If sats kollar varje input
     if( name === ""){
         // Om namnfält lämnas tomt skrivs felmeddelande ut
-        statusElm.append("<div class='form-error'>Name not valid!</div>");
+        statusElmName.append("<div class='form-error'>Please enter name!</div>");
         // Om namnfällt lämnas tomt hindras eventet som är att skicka formuläret att ske
         event.preventDefault()
     }
 
     if(!email.includes('@') || !email.includes('.')){
-        statusElm.append('<div class="form-error">Email not valid!</div>')
+        statusElmEmail.append('<div class="form-error">Email is not valid!</div>')
         event.preventDefault()
     } 
 
     if(phone.length != 10){
-        statusElm.append('<div class="form-error">Enter valid phonenumber</div>')
+        statusElmPhone.append('<div class="form-error">Please enter ten digit phone number!</div>')
         event.preventDefault()
     }
 
     if(streetname === ""){
-        statusElm.append('<div class="form-error">Please enter streetname</div>')
+        statusElmStreetname.append('<div class="form-error">Please enter streetname!</div>')
         event.preventDefault()
     }
 
     if(zip.length != 5){
-        statusElm.append('<div class="form-error">Zip is not valid!</div>')
+        statusElmZip.append('<div class="form-error">Please enter five digit zip!</div>')
         event.preventDefault()
     }
     if(city === ""){
-        statusElm.append('<div class="form-error">Enter city name!<div>')
+        statusElmCity.append('<div class="form-error">Please enter city name!<div>')
         event.preventDefault()
     }    
    
