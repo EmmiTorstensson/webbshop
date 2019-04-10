@@ -95,18 +95,6 @@ label {
 }
 */
 
-.name-hide,
-.email-hide,
-.phone-hide,
-.zip-hide,
-.street-hide,
-.city-hide {
-  display: none;
-  color: red;
-  font-size: 13px;
-  margin-top: 8px;
-  margin-bottom: 0;
-}
 
 /* orderbekräftelse (page = succeed)*/
 
