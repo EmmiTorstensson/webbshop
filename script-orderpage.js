@@ -56,32 +56,38 @@ $('#submit').click(function(event){
     // If sats kollar varje input
     if( name === ""){
         // Om namnfält lämnas tomt skrivs felmeddelande ut
-        statusElm.append("<div class='form-error'>Name not valid!</div>");
+        $('.name-hide').show()
+     //   statusElm.append("<div class='form-error'>Name not valid!</div>");
         // Om namnfällt lämnas tomt hindras eventet som är att skicka formuläret att ske
         event.preventDefault()
     }
 
     if(!email.includes('@') || !email.includes('.')){
-        statusElm.append('<div class="form-error">Email not valid!</div>')
+      $('.email-hide').show()
+     //   statusElm.append('<div class="form-error">Email not valid!</div>')
         event.preventDefault()
     } 
 
     if(phone.length != 10){
-        statusElm.append('<div class="form-error">Enter valid phonenumber</div>')
+      $('.phone-hide').show()
+     //   statusElm.append('<div class="form-error">Enter valid phonenumber</div>')
         event.preventDefault()
     }
 
     if(streetname === ""){
-        statusElm.append('<div class="form-error">Please enter streetname</div>')
+      $('.street-hide').show()
+    //    statusElm.append('<div class="form-error">Please enter streetname</div>')
         event.preventDefault()
     }
 
     if(zip.length != 5){
-        statusElm.append('<div class="form-error">Zip is not valid!</div>')
+      $('.zip-hide').show()
+     //   statusElm.append('<div class="form-error">Zip is not valid!</div>')
         event.preventDefault()
     }
     if(city === ""){
-        statusElm.append('<div class="form-error">Enter city name!<div>')
+      $('.city-hide').show()
+     //   statusElm.append('<div class="form-error">Enter city name!<div>')
         event.preventDefault()
     }    
    

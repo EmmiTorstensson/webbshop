@@ -89,7 +89,17 @@ label{
     margin-bottom: 50px;
 }
 
+/*
 .form-error{
     color: red;
     margin-top: 5px;
+}
+*/
+
+.name-hide, .email-hide, .phone-hide, .zip-hide, .street-hide, .city-hide{
+    display: none;
+    color: red;
+    font-size: 13px;
+    margin-top: 8px;
+    margin-bottom: 0;
 }
