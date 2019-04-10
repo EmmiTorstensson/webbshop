@@ -1,106 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   <link rel="stylesheet" href="style.css">
-   <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Amatic+SC"
+      rel="stylesheet"
+    />
 
-   <title>Order Page</title>
-
-</head>
-<body>
-
-
-<div class="container">
-
-    <div class="jumbotron center">
+    <title>Order Page</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron center">
         <h1>Bizarre Products Shop</h1>
-    </div>
-            
-    <nav>
+      </div>
+
+      <nav>
         <ul class="nav justify-content-end">
-            <li class="nav-item">
-                <a class="nav-link active" href="index.html"> Back to shop</a>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html"
+              ><i class="	fa fa-angle-double-left"></i> Back to shop</a
+            >
+          </li>
         </ul>
-    </nav>
-            
-    <div id="cart-container">
-     
+      </nav>
+
+      <div id="cart-container">
         <h4>My Cart</h4>
         <table id="myCart" class="table">
-            <tr>
-                <th></th>
-                <th>Item Name</th>
-                <th>Qty</th>
-                <th>Price</th>
-                <th>Remove item</th>
-            </tr>
-            <tr id="cart-update"></tr>
-
+          <tr>
+            <th></th>
+            <th>Item Name</th>
+            <th>Qty</th>
+            <th>Price</th>
+            <th>Remove item</th>
+          </tr>
+          <tr id="cart-update"></tr>
         </table>
-    </div>
+      </div>
 
-        <div class="empty-msg">
-            <img src="images/smiley.png" alt="smiley" class="smiley">
-            <h4>No Items In Cart</h4>
+      <div class="empty-msg">
+        <img src="images/smiley.png" alt="smiley" class="smiley" />
+        <h4>No Items In Cart</h4>
+      </div>
+
+      <!--"https://formspree.io/emmitors@gmail.com" -->
+      <form action="succeed.html">
+        <h2>Registration</h2>
+
+        <div class="form-class">
+          <label for="name">Full Name</label>
+          <input id="name" type="text" class="form-control" />
+          <p class="name-hide">Name not valid!</p>
         </div>
 
+        <div class="form-class">
+          <label for="email">Email</label>
+          <input id="email" type="email" class="form-control" />
+          <p class="email-hide">Email not valid!</p>
+        </div>
 
-        <form action="https://formspree.io/emmitors@gmail.com" method="POST">
-            <h2>Registration</h2>
-    
-    <div class="form-class">
-    <label for="firstname">Full Name</label>
-    <input id="name" type="text" class="form-control"/>
-    <p class="name-hide">Name not valid!</p>
-    </div>  
-    
-    <div class="form-class">
-    <label for="email">Email</label>
-    <input id="email" type="email" class="form-control" />
-    <p class="email-hide">Email not valid!</p>
+        <div class="form-class">
+          <label for="phone">Phonenumber</label>
+          <input
+            id="phone"
+            type="number"
+            placeholder="Enter 10-digits"
+            class="form-control"
+          />
+          <p class="phone-hide">Phonenumber not valid!</p>
+        </div>
+
+        <div class="form-class">
+          <label for="streetname">Streetname</label>
+          <input type="text" id="streetname" class="form-control" />
+          <p class="street-hide">Streetname not valid!</p>
+        </div>
+
+        <div class="form-class">
+          <label for="zip">Zip</label>
+          <input
+            id="zip"
+            type="number"
+            placeholder="XXXXX"
+            class="form-control"
+          />
+          <p class="zip-hide">Zip code not valid!</p>
+        </div>
+
+        <div class="form-class">
+          <label for="city">City</label>
+          <input
+            type="text"
+            id="city"
+            placeholder="City"
+            class="form-control"
+          />
+          <p class="city-hide">City not valid!</p>
+        </div>
+
+        <button id="submit" name="submit">Submit</button>
+      </form>
+
+      <footer class="page-footer">
+        <p>Page By Emmi & Emma</p>
+      </footer>
     </div>
-    
-    <div class="form-class">
-    <label for="phone">Phonenumber</label>    
-    <input id="phone" type="number" placeholder="Enter 10-digits" class="form-control"> 
-    <p class="phone-hide">Phonenumber not valid!</p>
-    </div>
+    <!-- CONTAINER -->
 
-    <div class="form-class">
-    <label for="streetname">Streetname</label>
-    <input type="text" id="streetname" class="form-control">
-    <p class="street-hide">Streetname not valid!</p>
-    </div>
-    
-    <div class="form-class">
-    <label for="zip">Zip</label>
-    <input id="zip" type="number" placeholder="XXXXX" class="form-control">
-    <p class="zip-hide">Zip code not valid!</p>
-    </div>
-
-    <div class="form-class">
-    <label for="city">City</label>
-    <input type="text" id="city" placeholder="City" class="form-control">
-    <p class="city-hide">City not valid!</p>
-    </div> 
-
-    <button id="submit" type="submit" name="submit">Submit</button>
-    <div id="status"></div>
-    
-  </form>
-
-<footer class="page-footer">
-<p>Page By Emmi & Emma</p>
-</foote>
-
-</div> <!-- CONTAINER -->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-<script src="script-orderpage.js"></script>
-</body>
-</html> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="script-orderpage.js"></script>
+  </body>
+</html>

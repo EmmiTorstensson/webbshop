@@ -1,65 +1,64 @@
 {
-    "items":
-   [
-       {
-           "id":"0",
-           "title":"Scarlett Johanssons's Dirty Tissue",
-           "price": 4500,
-           "img": "images/tissue.jpg"
-       },
-       {
-           "id":"1",
-           "title":"Justin Timbarlake's Half Eaten Toast",
-           "price": 3200,
-           "img": "images/toast.jpg"
-       },
-       {
-           "id":"2",
-           "title":"Post Malone's Lock Of Hair",
-           "price": 500,
-           "img":"images/hair-lock.jpg"
-       },
-       {
-           "id":"3",
-           "title":"Britney Spear's Used Pregnancy Test",
-           "price":"6300",
-           "img":"images/pregnancy-test.jpg"
-       },
-       {
-           "id":"4",
-           "title":"Lady Gaga's False Nail",
-           "price": 2700,
-           "img":"images/false-nail.jpg"
-       },
-       {
-           "id":"5",
-           "title":"John Lennon's Tooth",
-           "price":"7500",
-           "img":"images/tooth.jpg"
-       },
-       {
-           "id":"6",
-           "title":"William Shatner's Kidney Stone",
-           "price":"4100",
-           "img":"images/kidney-stone.jpg"
-       },
-       {
-           "id":"7",
-           "title":"Brangelina Jar of air",
-           "price":"10400",
-           "img":"images/brangelina.jpg"
-       },
-       {
-           "id":"8",
-           "title":"Justin Bieber's space suit from Super Bowl",
-           "price":"67300",
-           "img":"images/space-suit.jpeg"
-       },
-       {
-           "id":"9",
-           "title":"Ozzy Osbourne's Space Suit (touched by Justin Bieber)",
-           "price":"8500",
-           "img":"images/space-suit.jpeg"
-       }
-   ] 
+  "items": [
+    {
+      "id": "0",
+      "title": "Scarlett Johanssons's Dirty Tissue",
+      "price": 4500,
+      "img": "images/tissue.jpg"
+    },
+    {
+      "id": "1",
+      "title": "Justin Timbarlake's Half Eaten Toast",
+      "price": 3200,
+      "img": "images/toast.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Post Malone's Lock Of Hair",
+      "price": 500,
+      "img": "images/hair-lock.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Britney Spear's Used Pregnancy Test",
+      "price": "6300",
+      "img": "images/pregnancy-test.jpg"
+    },
+    {
+      "id": "4",
+      "title": "Lady Gaga's False Nail",
+      "price": 2700,
+      "img": "images/false-nail.jpg"
+    },
+    {
+      "id": "5",
+      "title": "John Lennon's Tooth",
+      "price": "7500",
+      "img": "images/tooth.jpg"
+    },
+    {
+      "id": "6",
+      "title": "William Shatner's Kidney Stone",
+      "price": "4100",
+      "img": "images/kidney-stone.jpg"
+    },
+    {
+      "id": "7",
+      "title": "Brangelina Jar of air",
+      "price": "10400",
+      "img": "images/brangelina.jpg"
+    },
+    {
+      "id": "8",
+      "title": "Justin Bieber's space suit from Super Bowl",
+      "price": "67300",
+      "img": "images/space-suit.jpeg"
+    },
+    {
+      "id": "9",
+      "title": "Ozzy Osbourne's Space Suit (touched by Justin Bieber)",
+      "price": "8500",
+      "img": "images/space-suit.jpeg"
+    }
+  ]
 }
